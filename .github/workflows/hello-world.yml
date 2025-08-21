@@ -5,4 +5,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: my-step
-        run: echo "Hello World!"
+        run: echo "Hello World from Pipeline!"
+        
+      - name: Checkout repository
+        uses: actions/checkout@v5
+        
+      - name: List the content
+        run: ls -lrt
+        
+      - name: Execute shell
+        run: sh sample.sh
