@@ -6,22 +6,3 @@ jobs:
     steps:
       - name: my-step
         run: echo "Hello World!"
-      - name: Create a directory
-        run: mkdir sample
-      - name: create a file
-        run: touch sample.txt
-      - name: List the contents
-        run: ls -lrt
-        
-  my-job2:
-    needs: my-job
-    runs-on: ubuntu-latest
-    steps:
-      - name: my-step2
-        run: echo "Hello World!"
-      - name: Create a directory2
-        run: mkdir sample2
-      - name: create a file2
-        run: touch sample2.txt
-      - name: List the contents2
-        run: ls -lrt
