@@ -14,6 +14,7 @@ jobs:
         run: ls -lrt
         
   my-job2:
+    needs: my-job
     runs-on: ubuntu-latest
     steps:
       - name: my-step2
